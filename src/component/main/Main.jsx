@@ -1,13 +1,50 @@
-import React, { useContext,useEffect } from 'react'
+import React, { useContext,useState } from 'react'
+import 'regenerator-runtime/runtime';
 import './main.css'
 // import profile from '../../../public/profile_img.WEBP'
 import Icon from '../../assets/icon.png'
 import { Context } from '../../context/Context'
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 
 
 
 const Main = () => {
+
+  
+  
+    const [isListening, setIsListening] = useState(false); // State to track listening status
+    const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+  
+    // Start listening
+    const startListening = () => {
+      SpeechRecognition.startListening({ continuous: true });
+      setIsListening(true); // Set listening state to true
+    };
+  
+    // Stop listening
+    const stopListening = () => {
+      SpeechRecognition.stopListening();
+      setIsListening(false); // Set listening state to false
+    };
+   
+     if (!browserSupportsSpeechRecognition) {
+       return null
+     }
+
+//        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+//     console.log("Microphone access is supported.");
+//     navigator.mediaDevices.getUserMedia({ audio: true })
+//         .then(stream => {
+//             console.log("Microphone access granted.");
+//             stream.getTracks().forEach(track => track.stop()); // Stop the stream
+//         })
+//         .catch(error => {
+//             console.log("Microphone access denied:", error);
+//         });
+// } else {
+//     console.log("Microphone access is not supported in this browser.");
+//  }
 
   
 
@@ -77,6 +114,7 @@ const Main = () => {
                         <div className='left_side'>
                             {/* <i className='bx bx-plus plus_icon' ></i> */}
                             <input onKeyDown={handleKeyDown} onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Ask ChatAi' /> 
+                            {transcript}
 
                         </div>
 
@@ -84,8 +122,16 @@ const Main = () => {
                         {input ? <i onClick={()=>onSent()} className='bx bx-send' ></i>
                         :
                         <>
-                           {/* <i className="uil uil-image-plus image_icon"></i> */}
-                           <i  className='bx bx-microphone' ></i>
+                           {isListening ? (
+                                  
+                                    <i className='bx bx-stop-circle' onClick={stopListening} style={{cursor:'pointer'}}></i> 
+                                  
+                                ) : (
+                                  
+                                    <i className='bx bx-microphone' onClick={startListening} style={{cursor:'pointer'}}></i>
+                                  
+                            )}
+                           
                         </>}
                                
  
