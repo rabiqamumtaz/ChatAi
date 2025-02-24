@@ -1,6 +1,6 @@
 import React, { useContext,useEffect } from 'react'
 import './main.css'
-import profile from '../../../public/profile_img.WEBP'
+// import profile from '../../../public/profile_img.WEBP'
 import Icon from '../../assets/icon.png'
 import { Context } from '../../context/Context'
 
@@ -28,7 +28,7 @@ const Main = () => {
 
                 <div className="side_nav_content">
                 <i className="uil uil-apps"></i>
-                <img src={profile} alt="" className='nav_img' />
+                <img src="/profile_img.webp" alt="" className='nav_img' />
                 </div>
            </div>
           {/* ======= Navbar end ========= */}
@@ -44,7 +44,7 @@ const Main = () => {
                           :  
                               <div className='result'>
                                 <div className="result_title">
-                                  <img src={profile} alt="" />
+                                  <img src="/profile_img.webp" alt="" />
                                   <p>{recentPrompt}</p>
                                 </div>
 

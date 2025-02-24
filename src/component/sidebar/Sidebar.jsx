@@ -26,7 +26,7 @@ const Sidebar = () => {
 
             <div onClick={()=>newChat()} className="new_chats">
                 <a href="" className='new_chats-link'>
-                <i className='bx bx-plus'  ></i>
+                <i className='bx bx-plus'></i>
                 </a>
                 {extended?<p className="new_chats_add">New Chat</p>:null}
             </div>
