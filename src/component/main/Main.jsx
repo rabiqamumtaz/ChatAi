@@ -1,6 +1,6 @@
 import React, { useContext,useEffect } from 'react'
 import './main.css'
-import profile from '../../assets/profile_img.WEBP'
+import profile from '../../../public/profile_img.WEBP'
 import Icon from '../../assets/icon.png'
 import { Context } from '../../context/Context'
 
