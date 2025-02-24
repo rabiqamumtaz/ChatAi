@@ -1,0 +1,175 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px ;
+    color: #585858;
+}
+
+.nav .nav_img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.side_nav_content{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px;
+}
+
+.side_nav_content i{
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.main_container{
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.greet{
+    
+   height: 60vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.greet_text{
+    font-size: 50px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+    background: -webkit-linear-gradient(16deg, #4b90ff,#ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main_bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #dbe1e7; 
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 50px auto;
+}
+
+.left_side input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    width: 767px;
+}
+
+.search_box i{
+    font-size: 25px;
+}
+
+.right_side {
+    display: flex;
+    
+}
+
+.right_side i {
+    padding: 4px;
+}
+
+/* .plus_icon{
+    padding-top: 5px;
+} */
+
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow: scroll;
+
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result_title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+.result_data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+
+    100%{
+        background-position: 800px 0px
+    }
+}
+
+.result_data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.image_icon{
+    position: relative;
+    bottom: 5.5px;
+}
+
+.plus_icon{
+    position: relative;
+    bottom: -4.5px;
+}
