@@ -255,7 +255,7 @@ const Main = () => {
                         </div>
 
                         <div className='right_side'>
-                            {input.trim() ? (
+                            {input.trim() && !listening ? (
                                 <i onClick={() => { onSent(); resetTranscript(); }} className='bx bx-send'></i>
                             ) : (
                                 <i
