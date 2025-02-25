@@ -91,3 +91,14 @@
     padding-right: 10px;
 
 }
+
+@media screen and (max-width:600px){
+    .sidebar{
+        display: none;
+    }
+    .left_side input{
+        width: 192px;
+    }
+    
+    
+}
