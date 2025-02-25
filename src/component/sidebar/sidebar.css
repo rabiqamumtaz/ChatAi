@@ -102,3 +102,12 @@
     
     
 }
+
+@media screen and (max-width:900px){
+    
+    .left_side input{
+        width: 192px;
+    }
+    
+    
+}

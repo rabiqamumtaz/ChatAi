@@ -174,17 +174,5 @@
     bottom: -4.5px;
 }
 
-@media screen and (min-width:325px) and (max-width:600px){
-   
-    .left_side input{
-        flex: 1;
-        background: transparent;
-        border: none;
-        outline: none;
-        padding: 8px;
-        font-size: 18px;
-        width: 767px;
-    }
-    
-    
-}
+
+
